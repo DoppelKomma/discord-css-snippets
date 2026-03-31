@@ -1,0 +1,97 @@
+/* Obsidian like Channel list */
+
+:root {
+  --obsidian-line: rgb(255 255 255 / 0.3);
+}
+
+/* Channel name font weight */
+.name__2ea32 {
+  font-weight: var(--font-weight-normal);
+}
+
+/* Vertical line base (channel indent + voice user columns) */
+.link__2ea32::before,
+.list_c3cd7d::before,
+.list_c3cd7d::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: var(--obsidian-line);
+}
+
+/* Voice-user lines span full container height */
+.list_c3cd7d::before,
+.list_c3cd7d::after {
+  top: 0;
+  bottom: 0;
+}
+
+/* Voice user list container */
+.list_c3cd7d {
+  position: relative;
+}
+
+/* Position overrides for the shared base rule above */
+.list_c3cd7d::before { left: 18px; }
+.list_c3cd7d::after  { left: 34px; }
+
+/* Channel groups */
+.wrapper__29444 {
+  padding: var(--space-xxs) var(--space-xs) var(--space-xxs) 8px;
+  box-sizing: content-box;
+
+  .mainContent__29444 {
+    flex-direction: row-reverse;
+    flex: none;
+    gap: 8px;
+  }
+
+  .icon__29444 {
+    scale: 1.25;
+    margin-left: 4px;
+  }
+}
+
+/* Text channel spacing */
+.link__2ea32 {
+  padding: 2px 0 2px 18px;  /* shorthand replaces 3 declarations */
+  border-radius: 10px;
+
+  &::before { left: 10px; }
+
+  .icon__2ea32    { scale: 0.8; }
+  .linkTop__2ea32 { gap: 4px; }
+}
+
+/* Extra Padding */
+.wrapper__2ea32 {
+  margin: 0;
+  padding-left: 8px;
+}
+
+/* Remove default thread spine */
+.spine__5b40b { display: none; }
+
+/* Add second line to threads */
+.spineBorder__5b40b {
+  left: 18px;
+  width: 1px;
+  background: var(--obsidian-line);
+  height: 100%;
+}
+
+/* Thread spacing */
+.typeThread__2ea32 {
+  margin-left: 16px !important;
+
+  .link__2ea32 { padding-left: 20px; }
+  .name__2ea32 { font-size: 15px; }
+}
+
+/* Unread indicator pill */
+.unread__2ea32 {
+  width: 2px;
+  height: 8px;
+  left: 18px;
+  top: 14px;
+}
