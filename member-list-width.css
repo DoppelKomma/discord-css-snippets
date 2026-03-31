@@ -1,0 +1,4 @@
+/* Custom member list width */
+:root {
+  --custom-member-list-width: 400px;
+}
